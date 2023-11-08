@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">NBA-Tracking-APP</string>
-    <string name="game_title">Lakers V.S. Worriers</string>
-    <string name="game_time">00:00 EST</string>
-    <string name="game_arena">Crypto Arena</string>
-    <string name="game_score">116:17</string>
+    <string name="game_title_label">Lakers V.S. Worriers</string>
+    <string name="game_city_label">Los Angeles</string>
+    <string name="game_arena_label">Crypto Arena</string>
+    <string name="game_score_label">116:17</string>
+    <string name="game_duration_label">2:04:00</string>
+    <string name="game_date_label">10/12/2023</string>
+    <string name="game_start_label">10:00 pm</string>
+    <string name="game_end_label">10:00 pm</string>
 </resources>

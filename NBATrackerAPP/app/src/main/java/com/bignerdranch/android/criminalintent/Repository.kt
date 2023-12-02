@@ -10,17 +10,16 @@ import java.util.Locale
 import java.util.TimeZone
 
 class Repository {
-    var games: List<Game>? = null
-        private set
-
-    private suspend fun fetchGamesFromApi(): List<Game> {
+    private val trackerApi: TrackerApi
+    init {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://free-nba.p.rapidapi.com/")
             .addConverterFactory(ScalarsConverterFactory.create())
             .build()
+        trackerApi = retrofit.create(TrackerApi::class.java)
+    }
 
-        val trackerApi = retrofit.create(TrackerApi::class.java)
-
+    suspend fun fetchGamesFromApi(): List<Game> {
         val responseString = trackerApi.fetchGames(page = 0, perPage = 5, date = "2018-04-06")
         val jsonResponse = JSONObject(responseString)
         val gamesArray = jsonResponse.getJSONArray("data")
@@ -37,6 +36,8 @@ class Repository {
             val season = gameJson.getInt("season")
             val dateString = gameJson.getString("date")
             val date: Date = dateFormat.parse(dateString) ?: Date()
+            val homeConference = gameJson.getJSONObject("home_team").getString("conference")
+            val visitorConference = gameJson.getJSONObject("visitor_team").getString("conference")
 
             val game = Game(
                 id = gameJson.getString("id"),
@@ -45,7 +46,9 @@ class Repository {
                 homeTeamScore = homeTeamScore,
                 visitorTeamScore = visitorTeamScore,
                 season = season,
-                date = date
+                date = date,
+                visitorConference = visitorConference,
+                homeConference = homeConference
             )
 
             gamesList.add(game)
@@ -53,4 +56,36 @@ class Repository {
 
         return gamesList
     }
+
+    suspend fun fetchGameDetailsFromApi(): Game {
+        val responseString = trackerApi.fetchGameDetails("47179")
+        // Parse the JSON string into a Game object here
+        val jsonObject = JSONObject(responseString)
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss 'UTC'", Locale.getDefault())
+        dateFormat.timeZone = TimeZone.getTimeZone("UTC")
+        val homeTeam = jsonObject.getJSONObject("home_team").getString("full_name")
+        val visitorTeam = jsonObject.getJSONObject("visitor_team").getString("full_name")
+        val homeTeamScore = jsonObject.getInt("home_team_score")
+        val visitorTeamScore = jsonObject.getInt("visitor_team_score")
+        val season = jsonObject.getInt("season")
+        val dateString = jsonObject.getString("date")
+        val date: Date = dateFormat.parse(dateString) ?: Date()
+        val homeConference = jsonObject.getJSONObject("home_team").getString("conference")
+        val visitorConference = jsonObject.getJSONObject("visitor_team").getString("conference")
+
+
+        val gameDetails = Game(
+            id = jsonObject.getString("id"),
+            homeTeam = homeTeam,
+            visitorTeam = visitorTeam,
+            homeTeamScore = homeTeamScore,
+            visitorTeamScore = visitorTeamScore,
+            season = season,
+            date = date,
+            visitorConference = visitorConference,
+            homeConference = homeConference
+        )
+        return gameDetails
+    }
+
 }

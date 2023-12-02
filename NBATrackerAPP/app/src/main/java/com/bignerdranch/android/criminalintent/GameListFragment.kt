@@ -49,6 +49,7 @@ class GameListFragment : Fragment(){
             gameScore.text = "${gameDetails.homeTeamScore} vs ${gameDetails.visitorTeamScore}"
             gameSeason.text = "${gameDetails.season}"
             gameDate.text = "Date: ${formatDate(gameDetails.date)}"
+            homeConference.text = "${gameDetails.homeTeam}"
         }
     }
     private fun formatDate(date: Date): String {

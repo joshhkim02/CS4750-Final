@@ -10,63 +10,63 @@
         android:id="@+id/game_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/game_title_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_title_label" />
+        android:textAppearance="?attr/textAppearanceHeadline5" />
     <!--Game Score-->
     <TextView
         android:id="@+id/game_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:layout_margin="10dp"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_score_label" />
+        android:text="@string/game_score_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
     <!--Season-->
     <TextView
         android:id="@+id/game_season"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_season_label" />
-    <!--City Setting-->
-    <TextView
-        android:id="@+id/game_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_city_label" />
-    <!--Game Arena-->
-    <TextView
-        android:id="@+id/game_arena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_arena_label" />
+        android:text="@string/game_season_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
     <!--Date-->
     <TextView
         android:id="@+id/game_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_date_label" />
-    <!--Start Time-->
+        android:text="@string/game_date_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+    <!--Home Team City-->
     <TextView
+        android:id="@+id/home_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_start_label" />
-    <!--End Time-->
+        android:text="@string/game_city_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+    <!--Home Team Conference-->
     <TextView
+        android:id="@+id/home_conference"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_end_label" />
-    <!--Game Duration-->
+        android:text="@string/game_conference_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
     <TextView
+        android:id="@+id/visitor_conference"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="@string/game_duration_label" />
+        android:text="@string/game_conference_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+    <!--Game status (regarding season)-->
+    <TextView
+        android:id="@+id/game_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/game_status_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
 </LinearLayout>

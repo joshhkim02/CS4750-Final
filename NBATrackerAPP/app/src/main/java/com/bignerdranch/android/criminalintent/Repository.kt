@@ -20,7 +20,7 @@ class Repository {
     }
 
     suspend fun fetchGamesFromApi(): List<Game> {
-        val responseString = trackerApi.fetchGames(page = 0, perPage = 5, date = "2018-04-06")
+        val responseString = trackerApi.fetchGames(page = 0, perPage = 25, date = "2018-04-06")
         val jsonResponse = JSONObject(responseString)
         val gamesArray = jsonResponse.getJSONArray("data")
         val gamesList = mutableListOf<Game>()

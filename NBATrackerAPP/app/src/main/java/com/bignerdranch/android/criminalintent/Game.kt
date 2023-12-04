@@ -9,6 +9,7 @@ data class Game(
     val homeTeamScore: Int,
     val visitorTeamScore: Int,
     val homeConference: String,
+    val homeCity: String,
     val visitorConference: String,
     val season: Int,
     val date: Date

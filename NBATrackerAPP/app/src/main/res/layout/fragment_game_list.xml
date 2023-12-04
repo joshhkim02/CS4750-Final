@@ -1,72 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:layout_margin="16dp"
+    android:background="@drawable/wallpaper"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
     <!--Matchup Title-->
     <TextView
         android:id="@+id/game_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
         android:text="@string/game_title_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp" />
     <!--Game Score-->
     <TextView
         android:id="@+id/game_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:fontFamily="@font/anton"
         android:text="@string/game_score_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp" />
+    <!--Game Winner-->
+    <TextView
+        android:id="@+id/game_winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:paddingBottom="5dp"
+        android:text="@string/game_winner_label"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
     <!--Season-->
     <TextView
         android:id="@+id/game_season"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
         android:text="@string/game_season_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
     <!--Date-->
     <TextView
         android:id="@+id/game_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
         android:text="@string/game_date_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
     <!--Home Team City-->
     <TextView
         android:id="@+id/home_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:paddingBottom="5dp"
         android:text="@string/game_city_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
+    <!--Conference Indicator-->
+    <TextView
+        android:id="@+id/conference_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:text="Conference:"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
     <!--Home Team Conference-->
     <TextView
         android:id="@+id/home_conference"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
         android:text="@string/game_conference_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
+    <!--Visitor Team Conference-->
+    <!--NBA Logo-->
     <TextView
         android:id="@+id/visitor_conference"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="246dp"
+        android:fontFamily="@font/anton"
         android:text="@string/game_conference_label"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
-    <!--Game status (regarding season)-->
-    <TextView
-        android:id="@+id/game_status"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/game_status_label"
-        android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline5" />
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/nba_logo_transparent" />
 </LinearLayout>

@@ -38,6 +38,7 @@ class Repository {
             val date: Date = dateFormat.parse(dateString) ?: Date()
             val homeConference = gameJson.getJSONObject("home_team").getString("conference")
             val visitorConference = gameJson.getJSONObject("visitor_team").getString("conference")
+            val homeCity = gameJson.getJSONObject("home_team").getString("city")
 
             val game = Game(
                 id = gameJson.getString("id"),
@@ -48,6 +49,7 @@ class Repository {
                 season = season,
                 date = date,
                 visitorConference = visitorConference,
+                homeCity = homeCity,
                 homeConference = homeConference
             )
 
@@ -58,7 +60,7 @@ class Repository {
     }
 
     suspend fun fetchGameDetailsFromApi(): Game {
-        val responseString = trackerApi.fetchGameDetails("47179")
+        val responseString = trackerApi.fetchGameDetails("48747")
         // Parse the JSON string into a Game object here
         val jsonObject = JSONObject(responseString)
         val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss 'UTC'", Locale.getDefault())
@@ -72,6 +74,7 @@ class Repository {
         val date: Date = dateFormat.parse(dateString) ?: Date()
         val homeConference = jsonObject.getJSONObject("home_team").getString("conference")
         val visitorConference = jsonObject.getJSONObject("visitor_team").getString("conference")
+        val homeCity = jsonObject.getJSONObject("home_team").getString("city")
 
 
         val gameDetails = Game(
@@ -83,7 +86,8 @@ class Repository {
             season = season,
             date = date,
             visitorConference = visitorConference,
-            homeConference = homeConference
+            homeConference = homeConference,
+            homeCity = homeCity
         )
         return gameDetails
     }

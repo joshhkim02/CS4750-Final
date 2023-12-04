@@ -46,10 +46,17 @@ class GameListFragment : Fragment(){
     private fun updateUI(gameDetails: Game) {
         with(binding) {
             gameTitle.text = "${gameDetails.homeTeam} vs ${gameDetails.visitorTeam}"
-            gameScore.text = "${gameDetails.homeTeamScore} vs ${gameDetails.visitorTeamScore}"
-            gameSeason.text = "${gameDetails.season}"
+            gameScore.text = "${gameDetails.homeTeamScore} - ${gameDetails.visitorTeamScore}"
+            gameSeason.text = "Season: ${gameDetails.season}"
             gameDate.text = "Date: ${formatDate(gameDetails.date)}"
-            homeConference.text = "${gameDetails.homeTeam}"
+            homeCity.text = "City: ${gameDetails.homeCity}"
+            homeConference.text = "${gameDetails.homeTeam}: ${gameDetails.homeConference}"
+            visitorConference.text = "${gameDetails.visitorTeam}: ${gameDetails.visitorConference}"
+
+            if (gameDetails.homeTeamScore > gameDetails.visitorTeamScore)
+                gameWinner.text = "${gameDetails.homeTeam} win!"
+            else
+                gameWinner.text = "${gameDetails.visitorTeam} win!"
         }
     }
     private fun formatDate(date: Date): String {

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20119181-b4d4-40f7-92a9-21e2a2df9b6b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/card_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/card_game.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/fragment_game_recycler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/fragment_game_recycler.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Z3hBbZS0N8RXVVuQTBAroJxbFY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ethan/AndroidStudioProjects/CS4750-Final/NBATrackerAPP&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20119181-b4d4-40f7-92a9-21e2a2df9b6b" name="Changes" comment="" />
+      <created>1701656536251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701656536251</updated>
+    </task>
+    <servers />
+  </component>
+</project>

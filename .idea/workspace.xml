@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20119181-b4d4-40f7-92a9-21e2a2df9b6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/card_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/card_game.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/fragment_game_recycler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NBATrackerAPP/app/src/main/res/layout/fragment_game_recycler.xml" afterDir="false" />
-    </list>
+    <list default="true" id="20119181-b4d4-40f7-92a9-21e2a2df9b6b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

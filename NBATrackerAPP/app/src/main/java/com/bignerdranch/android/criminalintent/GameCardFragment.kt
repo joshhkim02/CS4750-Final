@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -25,7 +26,9 @@ class GameCardFragment : Fragment() {
         recyclerView = view.findViewById(R.id.game_recycler_view) // Make sure this ID is in your fragment's layout
 
         viewModel.loadGames { games ->
-            val adapter = GameAdapter(games)
+            val adapter = GameAdapter(games) {
+                findNavController().navigate(R.id.action_gameCardFragment_to_gameListFragment)
+            }
             recyclerView.adapter = adapter
             recyclerView.layoutManager = LinearLayoutManager(context)
         }

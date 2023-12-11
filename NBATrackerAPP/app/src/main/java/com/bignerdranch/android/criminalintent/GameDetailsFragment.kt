@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.bignerdranch.android.criminalintent.databinding.FragmentGameListBinding
+import com.bignerdranch.android.criminalintent.databinding.FragmentGameDetailsBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
 
-class GameListFragment : Fragment(){
-    private var _binding: FragmentGameListBinding? = null
+class GameDetailsFragment : Fragment(){
+    private var _binding: FragmentGameDetailsBinding? = null
     private val binding
         get() = checkNotNull(_binding) {
             "Cannot access binding because it is null. Is the view visible?"
@@ -28,12 +28,13 @@ class GameListFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View {
         _binding =
-            FragmentGameListBinding.inflate(inflater, container, false)
+            FragmentGameDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val gameId = arguments?.getString("gameId")
         viewModel.loadGameDetails { game ->
             updateUI(game)
         }

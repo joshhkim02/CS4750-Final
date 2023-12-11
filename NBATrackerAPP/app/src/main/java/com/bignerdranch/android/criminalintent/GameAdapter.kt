@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
+class GameAdapter(private val games: List<Game>, private val onItemClicked: (String) -> Unit) : RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_game, parent, false)
@@ -15,6 +15,7 @@ class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdap
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
         val game = games[position]
         holder.bind(game)
+        holder.itemView.setOnClickListener { onItemClicked(game.id) }
     }
 
     override fun getItemCount() = games.size

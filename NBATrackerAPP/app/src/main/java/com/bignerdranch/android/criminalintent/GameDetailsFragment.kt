@@ -35,7 +35,10 @@ class GameDetailsFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val gameId = arguments?.getString("gameId")
-        viewModel.loadGameDetails { game ->
+        if (gameId != null) {
+            viewModel.getGameID(gameId)
+        }
+        viewModel.loadGameDetails{ game ->
             updateUI(game)
         }
     }

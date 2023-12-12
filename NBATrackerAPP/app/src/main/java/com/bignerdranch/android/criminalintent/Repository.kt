@@ -59,8 +59,8 @@ class Repository {
         return gamesList
     }
 
-    suspend fun fetchGameDetailsFromApi(): Game {
-        val responseString = trackerApi.fetchGameDetails("48747")
+    suspend fun fetchGameDetailsFromApi(gameID: String): Game {
+        val responseString = trackerApi.fetchGameDetails(gameID)
         // Parse the JSON string into a Game object here
         val jsonObject = JSONObject(responseString)
         val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss 'UTC'", Locale.getDefault())
